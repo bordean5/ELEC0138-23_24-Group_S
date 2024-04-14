@@ -15,7 +15,8 @@ In this attack, a phishing email is sent to the target doctor, using the reason 
 1. Clone the repository
 2. Complete the steps of the main readme file
 3. Change the path of password.txt in the instance within app.py file
-4. Run the line "flask run" on the terminal
-5. Click the local link generated below: Running on http://127.0.0.1:5000
-6. Enter username and password
-7. The username and password used for logging in are saved in the file password.txt within the instance
+4. 
+5. Run the line "flask run" on the terminal
+6. Click the local link generated below: Running on http://127.0.0.1:5000
+7. Enter username and password
+8. The username and password used for logging in are saved in the file password.txt within the instance
