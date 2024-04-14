@@ -4,11 +4,11 @@
 In this attack, a phishing email is sent to the target doctor, using the reason that the system is stuck and needs to be updated to induce the doctor to click on the link and log into the (Electronic Health Records) EHR systems. In this case, the doctor's username and password will be recorded to complete the attack.
 
 ### Two main parts about phishing
-1. Phishing email
-2. Phishing website (app.py)
+1. phishing email
+2. phishing website (app.py)
 
-- `Phishing email`: Send phishing emails to targeted doctors with links to phishing website
-- `Phishing website`:A web page with a login interface similar to the basic version of the EHR web page, which saves the user name and password of the logged-in person to the password.txt file
+- `phishing_email.py`: Send phishing emails to targeted doctors with links to phishing website
+- `app.py(phishing_website)`:A web page with a login interface similar to the basic version of the EHR web page, which saves the user name and password of the logged-in person to the password.txt file
 - `README.md`:The README file for phishing.
 
 ## Program run instruction
