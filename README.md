@@ -32,5 +32,9 @@ This project simulates an Electronic Health Record (EHR) System which allows hos
 - `README.md`:The README file for the project.
 
 ## Program run instruction
-1. create 
+1. Clone the repository
+2. Create a new Python env with version 3.9 and install the dependencies with requirement.txt
+3. Open each folder to run the corresponding part
+4. The instructions for each part are detailed in the readme file within each folder
+ 
 
