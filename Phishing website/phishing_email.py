@@ -45,6 +45,6 @@ EHR System Administrator</p>
         server.quit()
 
 if __name__ == "__main__":
-    recipient = "2412705414@qq.com"
+    recipient = "2412705414@qq.com"  #the recipient of the phishing email
     flask_app_link = "http://127.0.0.1:5000"
     send_email(recipient, flask_app_link)
