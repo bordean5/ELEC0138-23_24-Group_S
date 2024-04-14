@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#send2FA').click(function(e) {
+                e.preventDefault();
+                $.ajax({
+                    url: '/send_2fa',
+                    type: 'POST',
+                    data: {
+                        username: $('#username').val(),
+                        password: $('#password').val()
+                    },
+                    success: function(response) {
+                        alert('2FA code sent! Please check your email.');
+                    },
+                    error: function() {
+                        alert('Failed to send 2FA code.');
+                    }
+                });
+            });
+
+            $('#login').click(function(e) {
+                e.preventDefault();
+                $.ajax({
+                    url: '/login',
+                    type: 'POST',
+                    data: {
+                        username: $('#username').val(),
+                        password: $('#password').val(),
+                        code: $('#code').val()
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            window.location.href = '/dashboard';
+                        } else {
+                            alert(response.message);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br>
+        <label for="code">2FA Code:</label>
+        <input type="text" id="code" name="code"><br>
+        <button id="send2FA">Send 2FA Code</button>
+        <button id="login">Login</button>
+    </form>
+</body>
+</html>
