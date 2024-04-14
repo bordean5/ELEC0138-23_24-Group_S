@@ -16,7 +16,7 @@ This project simulates an Electronic Health Record (EHR) System which allows hos
 4. Security Headers
 5. Parametrized queries
 
-### Program structure
+## Program structure
 -- ELEC0138 Security and Privacy 23/24 Group_S
 ```
 - EHR website base version
