@@ -2,7 +2,7 @@ import requests
 import threading
 
 # Target URL
-target_url = "http://your-target-server-address/login"
+target_url = "http://127.0.0.1:5000/login"
 
 # Function to send requests
 def send_requests():
