@@ -63,7 +63,7 @@ def index():
     return redirect(url_for('login'))
 
 @app.route('/send_2fa', methods=['POST'])
-@limiter.limit("10 per minute")
+@limiter.limit("3 per minute")
 def send_2fa():
     username = request.form['username']
     password = request.form['password']
