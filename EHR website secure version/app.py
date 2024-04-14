@@ -20,7 +20,7 @@ login_manager.login_view = 'login'
 limiter = Limiter(  #local limter, limter the access frequency, block brute force and dos attack 
     app=app,
     key_func=get_remote_address,  
-    default_limits=["200 per day", "50 per hour"] 
+    default_limits=["400 per day", "50 per hour"] 
 )
 
 def apply_security_headers(response):   #secuity defence headers to multiple attacs
