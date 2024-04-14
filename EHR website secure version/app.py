@@ -216,4 +216,4 @@ with app.app_context():
     db.create_all()
     add_doctor('yaoming', '1234','1304448069@qq.com',True)
     add_doctor('sixu', '4321', '2412705414@qq.com', True)
-    #add_doctor('yang', '9876', '', False)  #put your email for 2FA here
+    #add_doctor('', '', '', )  #create your own account with params: username, password, useremail(2FA), admin or common user(bool)
