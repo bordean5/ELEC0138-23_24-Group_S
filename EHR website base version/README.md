@@ -1,9 +1,9 @@
 # ELEC0138 Security and Privacy 23/24 Group_S
 
 ## Description
-This EHR website base version folder contains the original version of the web application. It suffers from the brute force attack and the dos attack. 
+This EHR website base version folder contains the original version of the web application. It suffers from brute force attack, DOS attack and SQL injection attacks. 
 
-### Two attacks to be implemented in this application:  
+### Three attacks to be implemented in this application:  
 1. Brute force attack
 2. Dos attack (HTTP flooding)
 3. SQL injection attack
