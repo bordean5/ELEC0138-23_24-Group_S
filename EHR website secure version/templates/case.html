@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Case</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        .add-patient-button {
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: inline-block;
+
+        .Return to dashboard-button {
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Patient Case</h1>
+    <p>Current logged-in doctor: {{ doctor_id }}</p>
+    <a href="home" class="Return to dashboard-button">Return to dashboard</a><br>
+    <br>
+    <a href="add_patient" class="add-patient-button">Add Patient<a>
+    <h2>EHR Systems</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Condition</th>
+                <th>Description</th>
+                <th>Responsible Doctor ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if patients %}
+                {% for patient in patients %}
+                    <tr>
+                        <td>{{ patient.id }}</td>
+                        <td>{{ patient.name }}</td>
+                        <td>{{ patient.age }}</td>
+                        <td>{{ patient.gender }}</td>
+                        <td>{{ patient.condition }}</td>
+                        <td>{{patient.description}}</td>
+                        <td>{{ patient.doctor_id }}</td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="6">No patient data available</td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+</body>
+</html>
+
