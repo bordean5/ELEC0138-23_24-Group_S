@@ -1,15 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Dashboard</title>
 </head>
-<a href="/add_patient">Add New Patient</a>
 <body>
+    <h1>Dashboard</h1>
+    <!-- Link to add a new patient -->
+    <a href="/add_patient">Add New Patient</a><br>
+
+    <!-- Search form -->
+    <form action="/search_patient" method="post">
+        <input type="text" id="patient_name" name="patient_name" placeholder="Enter patient name">
+        <input type="submit" value="Search">
+    </form>
+
     <h2>Patients</h2>
+    <!-- Display list of patients -->
     {% for patient in patients %}
         <p>Name: {{ patient.name }}, Age: {{ patient.age }}, Condition: {{ patient.condition }}</p>
     {% endfor %}
+    
+    <!-- Logout link -->
     <a href="/logout">Logout</a>
 </body>
 </html>
+
 
