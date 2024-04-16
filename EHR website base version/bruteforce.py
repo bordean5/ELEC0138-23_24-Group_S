@@ -32,6 +32,7 @@ for password in passwords:
 
 if not success:
     # Now let's attempt a brute force attack with a combination of digits and letters
+    print("None of the passwords in dictionary.txt matches")
     characters = string.ascii_letters + string.digits  # Combining letters and digits
     for password_length in range(2, 7):  # Adjust the range as needed
         if success:
