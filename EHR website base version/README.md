@@ -41,7 +41,7 @@ Copy the content within <<>>
 Login bypass:
 1. Username and password  <<' OR '1'='1>>
 2. only use username <<yaoming' -->>   without knowing the password
-3. use username <<admin' UNION SELECT * FROM users -->> without knowing the password
+3. use username <<admin' UNION SELECT * FROM Doctor -->> without knowing the password
 
 Patient search (after login):
 1. <<' OR '1'='1>>: get all patient data without name
