@@ -50,7 +50,7 @@ def login():
 def search_patient():
     if request.method == 'POST':
         patient_name = request.form.get('patient_name')
-        sql = db.text(f"SELECT id,name FROM patient WHERE name = '{patient_name}'")
+        sql = db.text(f"SELECT age,condition FROM patient WHERE name = '{patient_name}'")
         patients = db.session.execute(sql).fetchall()
         print(patients)
         return render_template('dashboard.html', patients=patients)
