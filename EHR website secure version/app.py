@@ -217,6 +217,4 @@ with app.app_context():
     add_doctor('yaoming', '1234','1304448069@qq.com',True)
     add_doctor('sixu', '4321', '2412705414@qq.com', True)
     #add_doctor('', '', '', )  #create your own account with params: username, password, useremail(2FA), admin or common user(bool)
-
-if __name__ == '__main__':
     app.run(ssl_context='adhoc')
