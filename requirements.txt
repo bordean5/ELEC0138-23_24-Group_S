@@ -28,3 +28,4 @@ werkzeug==3.0.1
 zipp==3.17.0
 Flask-Limiter
 requests
+pyopenssl
