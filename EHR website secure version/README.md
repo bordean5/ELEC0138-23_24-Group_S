@@ -40,5 +40,6 @@ This folder implements a secure Electronic Health Record (EHR) system with techn
 3. You can only request 2FA 3 times per minute
 4. Only the admin account has the function to register a new user(not admin)
 5. The website uses a simulated SSL certification which might be stopped by the browser, please use Chrome and ignore the alert.
+6. If the browser can not open the web, please try to close the firewall or change the browser
  
 
