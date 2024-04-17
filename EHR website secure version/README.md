@@ -30,7 +30,7 @@ This folder implements a secure Electronic Health Record (EHR) system with techn
 2. Complete the steps of the main readme file
 3. Open this folder with the editor
 4. Run the line "flask run" on the terminal to run the web server
-5. Click the local link generated below: Running on http://127.0.0.1:5000
+5. Click the local link generated below: Running on https://127.0.0.1:5000
 6. Create your own account in the last row of app.py with your name, password, email(2FA) and admin type (bool)
 7. Generate the 2FA code with the button, get the code from account email and login
 
@@ -39,5 +39,6 @@ This folder implements a secure Electronic Health Record (EHR) system with techn
 2. The 2FA last for 5 minutes and 3 tries. Or it expired
 3. You can only request 2FA 3 times per minute
 4. Only the admin account has the function to register a new user(not admin)
+5. The website uses a simulated SSL certification which might be stopped by the browser, please use Chrome and ignore the alert.
  
 
