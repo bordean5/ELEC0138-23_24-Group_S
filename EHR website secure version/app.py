@@ -164,7 +164,7 @@ def register():
             db.session.add(new_doctor)
             db.session.commit()
             flash('Doctor registered successfully.')
-            return redirect(url_for('login'))
+            return redirect(url_for('home'))
     return render_template('register.html')
 
 def add_doctor(username, password,email ,is_admin):
