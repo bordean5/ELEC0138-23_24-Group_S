@@ -9,6 +9,7 @@ This folder implements a secure Electronic Health Record (EHR) system with techn
 3. limits of authority
 4. Security Headers
 5. Parametrized queries
+6. Encryption(HTTPS)
 
 ## Program structure
 -- EHR website secure version
